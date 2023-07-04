@@ -1,0 +1,56 @@
+---
+ 
+import Layout from "../../layouts/Layout.astro";
+import Category from "../../components/Post/Category.astro";
+import PostMeta from "../../components/Post/PostMeta.astro";
+import SocialShare from "../../components/Post/SocialShare.astro";
+import formatPost from "../../utils/formatPost";
+import { sanitize } from "isomorphic-dompurify";
+
+const { slug } = Astro.params;
+const url = import.meta.env.CMS_URL_WP_JSON_CUSTOM + "/posts/" +slug
+const wpPost = await fetch(url).then((r) => r.json());
+const post=(await formatPost(wpPost))
+ 
+---
+
+
+<Layout title={post.title.rendered}>
+    <Category category={post.categories} />
+    <section class="container mx-auto max-w-site-full">
+        <h1
+            class="text-24px capitalize lg:text-[44px] break-words text-center my-3   font-bold"
+        >
+            {post.title.rendered}
+        </h1>
+        <div class="flex justify-center my-4">
+            {post.featuredImg.id.length>0 &&     <img src={post.featuredImg.large} width="1020"
+            height="720" alt={post.title.rendered}
+            title={post.title.rendered} />
+            }
+        
+        </div>
+        <PostMeta post={post} />
+        <SocialShare slug={post.slug} featuredImg={post.featuredImg} title={post.title} />
+        <div class="post-content" set:html={sanitize( post.content.rendered)}/>
+            
+ 
+    </section>
+
+</Layout>
+
+<script>
+    import lozad from 'lozad'
+
+    const observer = lozad(".lozad", {
+  load: (el) => {
+    if (el.tagName === "IMG" || el.tagName === "VIDEO") {
+      // For Image Lazy Loading
+      el.src = el.dataset.src;
+      return;
+    }
+ 
+  },
+});
+observer.observe();
+</script>

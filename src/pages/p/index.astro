@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import PostsGrid from '../components/Grids/PostGrid.astro'
-import MainGrid from '../components/Grids/MainGrid.astro'
+import Layout from '../../layouts/Layout.astro'
+import PostsGrid from '../../components/Grids/PostGrid.astro'
+import MainGrid from '../../components/Grids/MainGrid.astro'
 const response = await fetch(import.meta.env.CMS_URL_WP_JSON_CUSTOM+"/home")
 const homePageData = await response.json()
 ---

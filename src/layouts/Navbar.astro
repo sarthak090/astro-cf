@@ -1,0 +1,258 @@
+<nav
+        class=" w-full top-0 fixed block  shadow-2xl  lg:mb-16   lg:py-2 py-2 px-4 font-raleway    lg:px-8  font-semibold   bg-black text-white    ">
+        <div class="max-w-site-full  mx-auto flex lg:flex-col justify-between items-center">
+            <div class="flex gap-2  close-icon transition-all delay-150 block ">
+                <div id="navbar-btn" class=" flex items-center lg:hidden gap-2 justify-end  ">
+                    <svg id="open-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="h-10 w-10 ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="h-10 w-10 hidden close-icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </div><a class="lg:block hidden" href="/"><img alt="Hiptoro" loading="eager" width="200" height="69"
+                        decoding="async" data-nimg="1" style="color:transparent"
+                        src=" /imgs/desk_logo.png"
+                         ></a>
+            </div>
+            <div class="  hidden lg:block   h-[1px] my-4 w-full bg-[#fbfbfb2b]"></div>
+            <div class="lg:hidden "><a href="/"><img alt="Hiptoro" loading="eager" width="160" height="60"
+                        decoding="async" data-nimg="1" style="color:transparent" src="/imgs/phone_logo.png"></a></div>
+            <div class="flex gap-2 items-center"></div>
+            <div class="lg:flex flex-col hidden items-end  justify-end">
+                <div id="navbar-options"
+                    class="lg:flex hidden top-12 md:top-0 md:py-0 items-center  w-full left-0 absolute md:relative justify-end gap-6">
+                    <a href="/p/category/entertainment">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer drop-down-hover relative">Entertainment<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg></p>
+                            <div
+                                class="lg:absolute bg-navDropDown drop-down-hover-options hidden   z-50  top-[45px] bg-navbar  ">
+                                <div class="flex  flex-col text-13px font-noto_sans    font-medium    "><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/anime">Anime</a><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/celebrities">Celebrities</a><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/gaming">Gaming</a><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/tv-shows">TV Shows</a><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/wwe">WWE</a></div>
+                            </div>
+                        </div>
+                    </a><a href="/p/category/trending">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer relative">Trending</p>
+                        </div>
+                    </a><a href="/p/category/news">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer relative">News</p>
+                        </div>
+                    </a><a href="/p/category/hiptoro-outliers">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer relative">Hiptoro Outliers</p>
+                        </div>
+                    </a><a href="/p/category/sports">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer relative">Sports</p>
+                        </div>
+                    </a><a href="/p/category/science">
+                        <div>
+                            <p class="   hover:underline hover:bg-navDropDown
+        flex items-center gap-1 p-3 text-13px font-medium cursor-pointer drop-down-hover relative">Science<svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg></p>
+                            <div
+                                class="hidden lg:absolute bg-navDropDown drop-down-hover-options   z-50  top-[45px] bg-navbar  ">
+                                <div class="flex  flex-col text-13px font-noto_sans    font-medium    "><a
+                                        class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                        href="/p/category/technology">Technology</a></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div>
+                        <form>
+                            <div class="hidden xl:flex items-center"><input class="p-2 outline-none text-black"
+                                    placeholder="Search..." value=""><label for=""
+                                    class="bg-[#fbfbfb2b] p-2 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z">
+                                        </path>
+                                    </svg></label></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="mobile-menu-static" class="mobile-menu-static hidden">
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/entertainment">Entertainment</a><svg
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4  dropdown-svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5">
+                                </path>
+                            </svg></p>
+                        <div class="lg:absolute bg-navDropDown dropdown-svg-option hidden z-50  top-[45px] bg-navbar  ">
+                            <div class="flex  flex-col text-13px font-noto_sans    font-medium    "><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/anime">Anime</a><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/celebrities">Celebrities</a><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/gaming">Gaming</a><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/tv-shows">TV Shows</a><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/wwe">WWE</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/trending">Trending</a></p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/news">News</a></p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/hiptoro-outliers">Hiptoro Outliers</a></p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/sports">Sports</a></p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p class="   hover:underline hover:bg-navDropDown
+            flex items-center gap-1 my-4 py-1 px-3 text-13px font-medium cursor-pointer relative"><a
+                                href="/p/category/science">Science</a><svg xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4  dropdown-svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5">
+                                </path>
+                            </svg></p>
+                        <div class="lg:absolute bg-navDropDown dropdown-svg-option hidden z-50  top-[45px] bg-navbar  ">
+                            <div class="flex  flex-col text-13px font-noto_sans    font-medium    "><a
+                                    class="hover:text-white   hover:bg-navHover p-2 px-7    "
+                                    href="/p/category/technology">Technology</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+
+(() => {
+  let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  const navbar = Array.from(document.getElementsByTagName("nav"))[0];
+
+  // Attach scroll event listener to the window
+  window.addEventListener("scroll", function () {
+    // Get the updated scroll position
+    const currentScrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    // Check if scrolling down and past the offset of 300
+    if (currentScrollPosition > scrollPosition && currentScrollPosition > 300) {
+      // Hide the navbar or perform any desired action
+      navbar.classList.add("hidden");
+    } else {
+      // Show the navbar or perform any desired action
+      navbar.classList.remove("hidden");
+    }
+
+    // Update the scroll position
+    scrollPosition = currentScrollPosition;
+  });
+
+  setNavbarResponsive();
+})();
+
+function setNavbarResponsive() {
+  const navBtn = document.getElementById("navbar-btn");
+  const openIcon = document.getElementById("open-icon");
+  const closeIcon = document.getElementById("close-icon");
+  const navOptions = document.getElementById("mobile-menu-static");
+  const dropdownSvgs = document.getElementsByClassName("dropdown-svg");
+
+  const dropdownHover = document.getElementsByClassName("drop-down-hover");
+  const dropdownHoverOptions = document.getElementsByClassName(
+    "  drop-down-hover-options"
+  );
+
+  navBtn.addEventListener("click", setNavbarItems);
+  Array.from(dropdownSvgs).forEach((dropDownBtn) => {
+    dropDownBtn.addEventListener("click", () => {
+      dropDownBtn.parentElement.parentElement.children[1].classList.toggle(
+        "hidden"
+      );
+    });
+  });
+  Array.from(dropdownHoverOptions).forEach((dropDownOption) => {
+    dropDownOption.addEventListener("mouseover", () => {
+      dropDownOption.classList.remove("hidden");
+    });
+    dropDownOption.addEventListener("mouseleave", () => {
+      dropDownOption.classList.add("hidden");
+    });
+  });
+
+  Array.from(dropdownHover).forEach((dropDownHov) => {
+    dropDownHov.addEventListener("mouseover", () => {
+      dropDownHov.parentElement.parentElement.children[1].classList.toggle(
+        "hidden"
+      );
+    });
+    dropDownHov.addEventListener("mouseleave", () => {
+      dropDownHov.parentElement.parentElement.children[1].classList.toggle(
+        "hidden"
+      );
+    });
+  });
+
+  function setNavbarItems() {
+    navOptions.classList.toggle("hidden");
+    openIcon.classList.toggle("hidden");
+    closeIcon.classList.toggle("hidden");
+  }
+}
+    </script>

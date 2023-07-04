@@ -1,0 +1,14 @@
+---
+const {category} = Astro.props
+---
+
+<div class="flex flex-wrap gap-3 my-6 justify-center">
+    {category &&
+      category.map((cat: any) => (
+        <div
+           class="hover:underline uppercase font-montserrat hover:cursor-pointer"
+        >
+          <a href={`/p/category/${cat.slug}`}> {cat.name}</a>
+        </div>
+      ))}
+  </div>

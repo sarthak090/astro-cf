@@ -1,0 +1,101 @@
+---
+export interface Props {
+posts:{
+  id: number;
+  date: string;
+  title: {
+    rendered: string;
+  };
+  diff: string;
+  excerpt: {
+    rendered: string;
+  };
+  slug: string;
+  featuredImg: {
+    id: string;
+    thumbnail: string;
+    medium: string;
+    large: string;
+  };
+  categories: {
+    id: number;
+    name: string;
+    slug: string;
+  }[];
+  author: {
+    name: string;
+    slug: string;
+  };
+}[];
+}
+import decodeHTMLEntities from '../../utils/htmlDecoder'
+const {posts} = Astro.props as Props
+---
+<section class="grid sm:grid-cols-2 md:grid-cols-1   my-6 md:my-4">
+    {posts.map((post: any) => (
+      <article
+        class="lg:border-b-[2px] grid md:grid-cols-2 py-2"
+     
+        item-scope=""
+        item-type="https://schema.org/Article"
+      >
+        <div class="flex  justify-center lg:justify-start">
+          { 
+          post.featuredImg.large &&
+          post.featuredImg.id &&
+          post.featuredImg.id.length > 0 ? (
+            <>
+              <img
+                alt={post.title.rendered}
+                src={
+                  post.featuredImg.large
+                    ? post.featuredImg.large
+                    : post.featuredImg.medium
+                }
+                width={500}
+                height={500}
+              
+                loading="lazy"
+                
+                
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+                class="max-h-[400px] object-contain  "
+              />
+            </>
+          ) : (
+            <div class="min-h-[300px]   bg-[#f1f1f1] rounded-lg px-8 flex justify-center items-center w-[90%]">
+              <img
+                src={"/imgs/glogo.png"}
+                alt="placeholder"
+                width={300}
+                class="max-h-[400px] object-contain  "
+                height={300}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+
+        <div class="md:px-2 flex flex-col justify-center">
+          <a class="hover:text-red-400" href={`/p/${post.slug}`}>
+            <p
+              class="text-md md:text-[22px] mt-3 md:mt-0 font-semibold   "
+               
+            >{post.title.rendered}</p>
+          </a>
+
+          <p
+            class="text-xs lg:text-[16px]  lg:mt-4 leading-5 lg:leading-7 overflow-hidden"
+          
+          >{decodeHTMLEntities(post.excerpt.rendered)}</p>
+
+           
+        </div>
+      </article>
+    ))}
+  </section>

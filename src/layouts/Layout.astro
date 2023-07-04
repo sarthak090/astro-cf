@@ -1,36 +1,33 @@
 ---
-export interface Props {
-	title: string;
+import '@fontsource/roboto';
+
+import Navbar from './Navbar.astro'
+import '../styles/blog.css';
+export interface Props{
+    title:string
 }
-
-const { title } = Astro.props;
+ const {title="Hiptoro"}=Astro.props as Props
 ---
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content" />
+        <meta name="robots" content="index,follow" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Navbar/>
+        <main class="container mx-auto px-2 lg:px-8 xl:px-0 lg:py-8 max-w-site-full" >
+        <slot />
+            
+
+        </main>
+    </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+    body:{
+        font-family: "Roboto";
+    }
 </style>

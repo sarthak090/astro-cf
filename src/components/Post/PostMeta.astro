@@ -1,0 +1,18 @@
+---
+const {post } = Astro.props
+---
+<div class="flex flex-wrap gap-4   px-2 my-2 py-2 border-t-2 border-b-2">
+    <div>{post.diff}</div>
+    <div class="">|</div>
+
+    <div class="capitalize  ">{post?.timeToRead?.text}</div>
+    <div class="">|</div>
+    <div>
+      <a
+        class=" hover:text-blue-500"
+        href={`/author/${post.author.slug}`}
+      >
+        {post.author.name}
+    </a>
+    </div>
+  </div>
